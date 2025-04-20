@@ -1,0 +1,33 @@
+.logo-navbar {
+    min-height: 100px;
+    max-width: 300px;
+  }
+  
+.custom-shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .logo2 {
+    min-height: 100px;
+    max-width: 300px;
+  }
+
+  .badget {
+    width: 100px;
+  }
+
+  .insta {
+    width: 40px;
+
+  }
+  .linkedin {
+    width: 30px;
+  }
+
+  .youtube {
+    width: 30px;
+  }
+
+  .face {
+    width: 30px;
+  }
