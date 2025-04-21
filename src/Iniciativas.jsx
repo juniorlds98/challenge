@@ -1,0 +1,37 @@
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
+import imgUrl from './assets/img/Hospital-Infantil-Sabará.png'
+import imgUrl4 from "./assets/img/Instituto-PENSI.png"
+import imgUrl5 from "./assets/img/Layer-2.png"
+import imgUrl6 from "./assets/img/Layer-1.png"
+
+
+function Iniciativas(){
+    return(
+        <footer className="flex justify-center mt-auto w-fullk">
+        <div className="flex items-center w-[1200px] bg-[#eaeaea] rounded-t-lg p-4 shadow-lg border border-blac">
+          <div className="w-[260px] px-[30px] pt-[10px] text-left">
+            iniciativas da <br/>
+            <strong>Fundação José Luiz <br />Egydio Setúbal</strong>
+          </div>
+          <div className="flex items-center gap-[30px]">
+            <a href="https://www.hospitalinfantilsabara.org.br/">
+              <img src={imgUrl} alt="Hospital Infantil Sabará" className='w-[180px] h-[110px]' />
+            </a>
+            <a href="https://autismoerealidade.org.br/">
+              <img src={imgUrl5} alt="Autismo e Realidade" className='w-[160px] h-[40px]' />
+            </a>
+            <a href="https://institutopensi.org.br/">
+              <img src={imgUrl4} alt="Instituto PENSI" className='w-[180px] h-[110px]' />
+            </a>
+            <a href="https://fundacaojles.org.br/departamento-de-pesquisa/">
+              <img src={imgUrl6} alt="Departamento de Pesquisa" className='w-[160px] h-[80px]' />
+            </a>
+          </div>
+        </div>
+      </footer>
+    );
+}
+
+export default Iniciativas; 
