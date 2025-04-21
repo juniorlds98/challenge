@@ -3,7 +3,6 @@ import "../src/style/index.css";
 function Triagem() {
   return (
     <div className="container-fluid p-0">
-      {/* Navbar */}
       <nav className="navbar navbar-expand-lg bg-white custom-shadow py-4">
         <div className="container justify-content-center">
           <a className="navbar-brand d-flex align-items-center" href="#">
@@ -16,57 +15,65 @@ function Triagem() {
         </div>
       </nav>
 
-      <div className="d-flex" style={{ minHeight: "calc(100vh - 160px)" }}>
-        <div
-          className="bg-light p-3 d-flex flex-column"
-          style={{ width: "220px" }}
-        >
-          <button className="btn btn-success mb-3">Parar atendimento</button>
-          <div className="mb-3">
-            <p className="mb-0">Timer</p>
-            <h5>00:00:00</h5>
+      <div className="container mt-4">
+        <div className="d-flex justify-content-center align-items-center bg-success p-3 rounded">
+          <div className="d-flex gap-3">
+            <button className="btn btn-light">Painel</button>
+            <button className="btn btn-light">Agenda</button>
+            <button className="btn btn-light">Prontuarios</button>
           </div>
-          <button className="btn btn-success mb-3">Resumo</button>
-          <button className="btn btn-success">Acompanhamento</button>
         </div>
 
-        <div className="flex-grow-1 p-4 bg-light">
-          <div className="d-flex align-items-center bg-secondary p-3 rounded text-white mb-3">
+        <div className="bg-light p-4 mt-3 rounded">
+          <div className="d-flex align-items-center">
             <div
               className="rounded-circle bg-success me-3"
-              style={{ width: "60px", height: "60px" }}
+              style={{ width: "80px", height: "80px" }}
             ></div>
             <div>
-              <p className="mb-1">Chico da Silva</p>
-              <p className="mb-1">Idade: 12</p>
-              <p className="mb-1">Convênio: Amil</p>
+              <h5 className="mb-0">Chico da Silva</h5>
+              <p className="mb-0">Idade: 12</p>
+              <p className="mb-0">Convênio: Amil</p>
               <p className="mb-0">Primeira consulta: Sim</p>
             </div>
           </div>
 
-          <div className="bg-white p-3 rounded">
-            <h6>
-              Insights Iniciais indicado pelo técnico responsável pela triagem:
-            </h6>
-            <ul>
-              <li>Coleta de dados iniciais</li>
-              <li>Sintomas iniciais</li>
-              <li>Recomendações se necessário</li>
-              <li>
-                Coleta de questões específicas (Alergia, hábitos, antecedentes
-                de patógenos familiares e cirurgia)
-              </li>
-            </ul>
-
-            <div className="d-flex align-items-center mt-4">
-              <div className="bg-danger text-white p-2 flex-grow-1 text-center rounded me-3">
-                Confirmação de formulário
-              </div>
-              <button className="btn btn-success">Salvar</button>
-            </div>
+          <div className="table-responsive mt-4">
+            <table className="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>Numero</th>
+                  <th>Cliente</th>
+                  <th>Médico</th>
+                  <th>Telefone</th>
+                  <th>Convênios</th>
+                </tr>
+              </thead>
+            </table>
           </div>
+
+          <ul className="list-group mt-4">
+            <li className="list-group-item">Informações gerais</li>
+            <li className="list-group-item">Relatórios sobre saúde</li>
+            <li className="list-group-item">Exames em PDF</li>
+            <li className="list-group-item">Pedidos de novos exames</li>
+            <li className="list-group-item">
+              Receita de medicamentos (Medicamentos disponíveis)
+            </li>
+            <li className="list-group-item">Acompanhamento de status médico</li>
+          </ul>
         </div>
       </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+      <br />
+
+
       <footer className="bg-primary text-white pt-5 pb-3">
         <div className="container">
           <div className="row">
