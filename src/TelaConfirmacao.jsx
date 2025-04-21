@@ -66,4 +66,4 @@ function TelaConfirmacao() {
 
 
 
-export default TelaConfirmacao
+export default TelaConfirmacao;
