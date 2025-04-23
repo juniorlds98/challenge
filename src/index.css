@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
+.botao{
+  @apply no-underline bg-[#d02] p-[15px] text-white text-center rounded-[3px] mt-[10px] mb-[10px] block;
+}
 
+.botaoCard{
+  @apply w-[125px] h-[40px] text-center no-underline bg-[#fff] text-[#005aa9] font-bold text-center rounded-[3px] bg-white py-[8px] px-[16px] rounded-[5px] inline-block;
+}
 
 .painel{
   @apply border border-black w-[142.5px] h-[53px] p-[5px] rounded-sm text-center font-bold text-white transition-colors;
@@ -18,19 +24,19 @@
   @apply text-[20px] font-bold mt-[30px] text-white font-sans;
 }
 
-.emergência {
-  @apply bg-[#d02];
+.emergencia {
+  @apply bg-[#E40321];
 }
 
-.emergência:hover {
-  background-color: #b9001d;
+.emergencia:hover {
+  background-color: #EB4259;
 }
 
-.urgência {
+.urgencia {
   @apply bg-[#ffc107];
 }
 
-.urgência:hover {
+.urgencia:hover {
   @apply bg-[#f0b400];
 }
 
@@ -50,12 +56,12 @@
   @apply bg-[#004386];
 }
 
-.pouca-urgência{
+.pouca-urgencia{
   @apply bg-[#7b1];
 }
 
-.pouca-urgência:hover{
-  @apply bg-[#77bb1180];
+.pouca-urgencia:hover{
+  @apply bg-[#99CA5F];
 }
 
 .no-margin {
@@ -145,3 +151,10 @@
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+.button {
+  @apply inline-block h-[35px] w-[230px] bg-[#77B82A] text-white font-bold rounded-full text-center leading-[35px] no-underline hover:bg-[#66a725];
+}
+
+.buttons {
+  @apply flex flex-col items-center space-y-5 w-[500px] pt-[20px] pb-[20px] justify-items-center;
+}

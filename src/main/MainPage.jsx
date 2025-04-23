@@ -1,5 +1,5 @@
-import Footer from "./Footer"
-import HeaderBootstrap from "./HeaderBootstrap"
+import Footer from "../components/Footer"
+import HeaderBootstrap from "../components/HeaderBootstrap"
 
 const MainPage = ({ children }) => {
     return (
