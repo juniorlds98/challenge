@@ -1,23 +1,22 @@
-import HeaderBootstrap from './HeaderBootstrap';
-import TempoDeAtendimento from './TempoDeAtendimento';
-import AgendaMedica from './AgendaMedica';
-import ChamadasFooter from './ChamadasFooter';
-import Iniciativas from './Iniciativas';
-import SidebarPacientes from './SidebarPacientes';
-import TabelaAgenda from './TabelaAgenda';
-import Footer from './footer';
+import HeaderBootstrap from './components/HeaderBootstrap';
+import TempoDeAtendimento from './components/TempoDeAtendimento';
+import AgendaMedica from './components/AgendaMedica';
+import ChamadasFooter from './components/ChamadasFooter';
+import Iniciativas from './components/Iniciativas';
+import SidebarPacientes from './components/SidebarPacientes';
+import TabelaAgenda from './components/TabelaAgenda';
+import Footer from './components/Footer';
 
 export default function TelaAgenda() {
   return (
     <>
-      <HeaderBootstrap />
-      <SidebarPacientes />
-      <TempoDeAtendimento />
-      <AgendaMedica />
-      <TabelaAgenda />
-      <ChamadasFooter />
-      <Iniciativas />
-      <Footer />
+      {/*<SidebarPacientes />*/}
+      {<TempoDeAtendimento />}
+      {<AgendaMedica />}
+      {/*<TabelaAgenda />*/}
+      {<ChamadasFooter />}
+      {<Iniciativas />}
+      {<Footer />}
     </>
   );
 }
