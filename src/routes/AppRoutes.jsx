@@ -7,9 +7,20 @@ import TelaConfirmacao from '../administrativo/TelaConfirmacao';
 import TelaAgenda from '../administrativo/TelaAgenda';
 import TelaCadastro from '../administrativo/TelaCadastro';
 import TelaAdministrativo from '../administrativo/TelaAdministrativo';
+
+import Login from '../login/Login';
+
+import AreaResponsavel from '../responsavel/AreaResponsavel'
+
+import AreaMedicaResultado from '../medica/AreaMedicaResultado'
+import AreaMedicaHistorico from '../medica/AreaMedicaHistorico'
 export const AppRoutes = () => (
   <Routes>
-    <Route path="/" element={<TelaConfirmacao />} />
+    <Route path="/" element={<Login />} />
+    <Route path="/" element={<AreaMedicaResultado />} />
+    <Route path="/" element={<AreaMedicaHistorico />} />
+    <Route path="/confirm" element={<TelaConfirmacao />} />
+    <Route path="/responsavel" element={<AreaResponsavel />} />
     <Route path="/home-page" element={<HomePage />} />
     <Route path="/tela-agenda" element={<TelaAgenda />} />
     <Route path="/tela-cadastro" element={<TelaCadastro />} />
