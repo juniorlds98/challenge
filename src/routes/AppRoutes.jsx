@@ -9,11 +9,15 @@ import TelaCadastro from '../administrativo/TelaCadastro';
 import TelaAdministrativo from '../administrativo/TelaAdministrativo';
 export const AppRoutes = () => (
   <Routes>
-    <Route path="/" element={<TelaConfirmacao />} />
+    <Route path="/" element={<Login />} />
+    <Route path="/medica/resultado" element={<AreaMedicaResultado />} />
+    <Route path="/medica/historico" element={<AreaMedicaHistorico />} />
+    <Route path="/confirmacao" element={<TelaConfirmacao />} />
+    <Route path="/responsavel" element={<AreaResponsavel />} />
     <Route path="/home-page" element={<HomePage />} />
-    <Route path="/tela-agenda" element={<TelaAgenda />} />
-    <Route path="/tela-cadastro" element={<TelaCadastro />} />
-    <Route path="/tela-administrativo" element={<TelaAdministrativo />} />
+    <Route path="/agenda" element={<TelaAgenda />} />
+    <Route path="/cadastro" element={<TelaCadastro />} />
+    <Route path="/administrativo" element={<TelaAdministrativo />} />
     <Route path="/estoque/lote" element={<LotePage />} />
     <Route path="/estoque/produto" element={<ProdutoPage />} />
     <Route path="/home-page" element={<HomePage />} />
