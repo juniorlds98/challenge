@@ -2,7 +2,7 @@ import '../medica-resultados.css'
 import Logo from '../assets/img/Logo.png'
 import crianca from '../assets/img/crianca.jpg'
 
-function Resultado() {
+function AreaMedicaResultado() {
 
   return (
     <>
@@ -103,4 +103,4 @@ function Resultado() {
   )
 }
 
-export default Resultado
+export default AreaMedicaResultado

@@ -3,7 +3,7 @@ import Logo from '../assets/img/Logo.png'
 import crianca from '../assets/img/crianca.jpg'
 
 
-function Historico_paciente() {
+function AreaMedicaHistorico() {
 
   return (
     <>  
@@ -87,4 +87,4 @@ function Historico_paciente() {
   )
 }
 
-export default Historico_paciente
+export default AreaMedicaHistorico
