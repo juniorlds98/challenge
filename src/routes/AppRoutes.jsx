@@ -9,6 +9,9 @@ import TelaCadastro from '../administrativo/TelaCadastro';
 import TelaAdministrativo from '../administrativo/TelaAdministrativo';
 
 import Login from '../login/Login';
+import Triagem01 from '../triagem/triagem01';
+import Triagem02 from '../triagem/triagem02';
+import Triagem03 from '../triagem/triagem03';
 
 import AreaResponsavel from '../responsavel/AreaResponsavel'
 
@@ -28,5 +31,8 @@ export const AppRoutes = () => (
     <Route path="/estoque/lote" element={<LotePage />} />
     <Route path="/estoque/produto" element={<ProdutoPage />} />
     <Route path="/home-page" element={<HomePage />} />
+    <Route path="/triagem01" element={<Triagem01 />} />
+    <Route path="/triagem02" element={<Triagem02 />} />
+    <Route path="/triagem03" element={<Triagem03 />} />
   </Routes>
 );
