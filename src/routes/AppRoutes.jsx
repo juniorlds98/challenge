@@ -12,6 +12,7 @@ import AreaResponsavel from '../responsavel/AreaResponsavel'
 import AreaMedicaResultado from '../medica/AreaMedicaResultado'
 import AreaMedicaHistorico from '../medica/AreaMedicaHistorico'
 import AreaMedicaPacientes from '../medica/AreaMedicaPacientes';
+import AreaMedicaChat from '../medica/AreaMedicaChat';
 
 export const AppRoutes = () => (
   <Routes>
@@ -19,6 +20,7 @@ export const AppRoutes = () => (
     <Route path="/medica/resultado" element={<AreaMedicaResultado />} />
     <Route path="/medica/resultado" element={<AreaMedicaPacientes />} />
     <Route path="/medica/historico" element={<AreaMedicaHistorico />} />
+    <Route path="/medica/chat" element={<AreaMedicaChat/>} />
     <Route path="/confirmacao" element={<TelaConfirmacao />} />
     <Route path="/responsavel" element={<AreaResponsavel />} />
     <Route path="/login" element={<Login />} />

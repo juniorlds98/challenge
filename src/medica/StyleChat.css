@@ -1,0 +1,81 @@
+.menu{
+  display: flex; 
+  padding: 10px 20px; 
+  left: 110px; 
+  right: 110px; 
+}
+
+.img{ /*Logo*/
+  width: 80px; 
+  height: auto; 
+  padding-top: 10px;
+}
+
+.ermer{
+  color: black;
+}
+
+.container-chat{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+  height: 510px;
+}
+
+.historico {
+    width: 25vw;
+    background-color: #126efd;
+    border-radius: 15px;
+    color: white;
+}
+
+.topicos-hitorico ul{
+  list-style: none;  
+  text-align: justify;  
+  padding-left: 15px;
+  margin-bottom: 20px; 
+}
+  
+.sub-topicos a{
+  color: #e6e1e1; 
+  text-decoration: none
+}
+
+.chat {
+  width: 75vw; 
+  background-color: #e8e4e4;
+  border: solid rgb(188, 184, 184) 2px;
+  border-radius: 15px;
+}
+
+.titulo-hitorico{
+  padding-top: 15px;
+
+}
+
+.mensagens{
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.container-mensagens{
+  display: flex;
+  overflow-y: auto;
+  
+}
+
+.container-chat-mensagem{
+  height: 340px;  
+}
+
+.mensagens{
+  width: 500px;
+  border-radius: 25px;
+
+}
+
+.enviar, .camera{
+  background-color: #126efd;
+
+}
