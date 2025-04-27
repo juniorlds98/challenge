@@ -15,18 +15,17 @@ import AreaMedicaPacientes from '../medica/AreaMedicaPacientes';
 
 export const AppRoutes = () => (
   <Routes>
-    <Route path="/" element={<Login />} />
+    <Route path="/" element={<HomePage />} />
     <Route path="/medica/resultado" element={<AreaMedicaResultado />} />
     <Route path="/medica/resultado" element={<AreaMedicaPacientes />} />
     <Route path="/medica/historico" element={<AreaMedicaHistorico />} />
     <Route path="/confirmacao" element={<TelaConfirmacao />} />
     <Route path="/responsavel" element={<AreaResponsavel />} />
-    <Route path="/home-page" element={<HomePage />} />
+    <Route path="/login" element={<Login />} />
     <Route path="/agenda" element={<TelaAgenda />} />
     <Route path="/cadastro" element={<TelaCadastro />} />
     <Route path="/administrativo" element={<TelaAdministrativo />} />
     <Route path="/estoque/lote" element={<LotePage />} />
     <Route path="/estoque/produto" element={<ProdutoPage />} />
-    <Route path="/home-page" element={<HomePage />} />
   </Routes>
 );
