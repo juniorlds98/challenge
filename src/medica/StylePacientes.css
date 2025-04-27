@@ -1,0 +1,123 @@
+.menu{
+    display: flex; 
+    padding: 10px 20px; 
+    left: 110px; 
+    right: 110px; 
+}
+  
+.img{ /*Logo*/
+    width: 80px; 
+    height: auto; 
+    padding-top: 10px;
+}
+
+.container-buscar-paciente{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    height: 520px;
+}
+
+.buscar-paciente { 
+    width: 25vw;
+    background-color: #126efd;
+    border-radius: 15px;
+    color: white;
+}
+
+.pesuisar-paciente{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.buscar{
+    width: 230px; 
+    margin: 10px;
+    color: #ffffff;
+}
+
+.pesquisar{
+    width: 40px; 
+    height: 40px;
+}
+
+.pacientes{
+    padding-top: 15px;
+    text-align: justify;  
+    padding-left: 15px;
+    margin-bottom: 15px; 
+}
+
+.lista-paciente-ordenada p{
+    text-align: justify;  
+    margin-bottom: 10px; 
+}
+    
+.nome{
+    color: #ffffff; 
+}
+
+.icone-paciente {
+    font-size: 25px;
+}
+
+.quantidade-paciente{
+    background-color:#7db714;
+    color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px;  
+}
+
+.container-levantamento-quantidade{
+    font-size: 45px;
+}
+
+.container-agendamento{
+    height: 250px;
+    margin-bottom: 20px;  
+    border-radius: 10px;
+    display: grid; 
+    gap: 10px;
+
+}
+
+.agendamento{
+    background-color: #e6e1e1; 
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.agendamento-dados{
+    background-color: #7db714;
+    color: #ffffff;
+    border-radius: 5px; 
+    margin-top: 5px;
+
+}
+
+.container-atendimento-mensal{
+    width: 903px; 
+    height: 180px;  
+    background-color: #b8cbeb;
+    text-align: justify;
+    margin-bottom: 20px;  
+}
+
+.container-atendimento-mensal{
+    border-radius: 10px;
+} 
+
+.atendimento-mensal-titulo{
+    margin: 20px;
+}
+
+.tempo, .data{
+    background-color: white;
+    color: black;
+}
