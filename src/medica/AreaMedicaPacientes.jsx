@@ -1,4 +1,3 @@
-import './App.css'
 import Logo from '../assets/img/Logo.png'
 import './StylePacientes.css'
 
