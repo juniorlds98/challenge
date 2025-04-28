@@ -1,4 +1,3 @@
-/* menu superior -----------------------------------------------------*/
 .container{
     background-color: #015ca9;
     color: white;
@@ -28,7 +27,6 @@
     font-size: 17px;
 }
 
-/* menu principal -----------------------------------------------------*/
 .menu-principal:hover .dropdown-menu {
     display: block;
     margin-top: 0; 
@@ -52,7 +50,6 @@
     color: #015ca9;
 }
 
-/*Icom de busca ----------------------------------------------------- */
 .dropdown-menu li {
     display: flex;
     align-items: center; 
@@ -78,7 +75,6 @@
     white-space: nowrap; 
 }
 
-/*Agendamento -----------------------------------------------------*/
 .conteudo-inicial{
     background-color: #eaeaea;
 }
@@ -97,7 +93,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: #838189;;
+    background-color: #838189;
 }
 
 .informacoes-tempo{
@@ -116,7 +112,7 @@
 }
 
 .emergencia{
-    background-color: #e4041c;;
+    background-color: #e4041c;
 }
 
 .urgencia{
@@ -142,7 +138,6 @@
     background-color:  #7db714;
 }
 
-/* menu principal -----------------------------------------------------*/
 .button-fila{
     background-color: white;
     color: black;
@@ -177,8 +172,6 @@
     margin-top: 50px;
 }
 
-
-/* ECMO & UTI----------------------------------------------------- */
 .linha-chamadas {
     display: flex; 
     gap: 20px; 
@@ -216,7 +209,6 @@
     color: #015ca9;
 }
 
-/* Saglario----------------------------------------------------- */
 .img-saglario{
     width: 100%; 
     height: auto;
@@ -225,13 +217,12 @@
     margin-top: 30px;
 }
 
-/* Noticias -----------------------------------------------------*/
 
 .utimas-noticias {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Alinha verticalmente no centro */
-    padding: 20px; /* Espaçamento interno opcional */
+    align-items: center; 
+    padding: 20px;
     text-align: justify;
     margin-top: 54px;
 }
