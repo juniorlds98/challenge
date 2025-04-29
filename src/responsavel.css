@@ -16,7 +16,7 @@
     border-radius: 10px;
 }
 
-.descricao ul{
+.descricao{
     width: 100%;       
     text-align: left;
     list-style-type: none;
@@ -37,7 +37,7 @@ h5{
     margin: 10px;
 }
 
-.dados-paciente ul{
+.dados-paciente{
     display: flex;
     justify-content: space-between;
     padding: 15px;   

@@ -17,10 +17,10 @@ function TelaConfirmacao() {
       />
 
       <div className="buttons flex flex-col">
-        <a href="#" className="button">ÁREA DO MÉDICO</a>
-        <a href="#" className="button">ÁREA DE TRIAGEM</a>
-        <a href="#" className="button">ÁREA DO RESPONSÁVEL</a>
-        <Link to="/tela-administrativo" className="button">ÁREA ADMINISTRATIVA</Link>
+      <Link to="/medica/paciente" className="button">ÁREA DO MÉDICO</Link>
+        <Link to="/administrativo" className="button">ÁREA DE TRIAGEM</Link>
+        <Link to="/responsavel" className="button">ÁREA DO RESPONSÁVEL</Link>
+        <Link to="/administrativo" className="button">ÁREA ADMINISTRATIVA</Link>
       </div>
     </div>
   </main>

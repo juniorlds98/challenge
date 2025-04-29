@@ -4,15 +4,18 @@
   left: 110px; 
   right: 110px; 
 }
-
+ul{
+  padding: 0 !important;
+}
 .img{ /*Logo*/
   width: 80px; 
   height: auto; 
   padding-top: 10px;
 }
 
-.ermer{
-  color: black;
+.hermes{
+  color: rgb(255, 255, 255);
+  background-color: #005CA9;
 }
 
 .container-chat{
@@ -23,14 +26,24 @@
   height: 510px;
 }
 
-.historico {
-    width: 25vw;
-    background-color: #126efd;
-    border-radius: 15px;
-    color: white;
+.chat {
+  width: 45vw; 
+  height: 165vh;
+  background-color: #e8e4e4;
+  border: solid rgb(188, 184, 184) 2px;
+  border-radius: 15px;
 }
 
-.topicos-hitorico ul{
+.historico1 {
+  width: 55vw;
+  background-color: #005CA9;
+  border-radius: 15px;
+  color: white;
+  padding: 5px;
+  height: 165vh;
+}
+
+.topicos-hitorico{
   list-style: none;  
   text-align: justify;  
   padding-left: 15px;
@@ -40,13 +53,6 @@
 .sub-topicos a{
   color: #e6e1e1; 
   text-decoration: none
-}
-
-.chat {
-  width: 75vw; 
-  background-color: #e8e4e4;
-  border: solid rgb(188, 184, 184) 2px;
-  border-radius: 15px;
 }
 
 .titulo-hitorico{
@@ -69,13 +75,40 @@
   height: 340px;  
 }
 
-.mensagens{
-  width: 500px;
-  border-radius: 25px;
-
+.percent-range:disabled {
+  background: rgb(255, 255, 255);
+  width: 30vw;
+  appearance: none; /* Remove estilos padrão em alguns browsers */
+  -webkit-appearance: none;
+  border-radius: 30px;
+  position: relative;
 }
 
-.enviar, .camera{
-  background-color: #126efd;
+/* Estilo da trilha (track) */
+.percent-range:disabled::-webkit-slider-runnable-track {
+  background: linear-gradient(to left, #77b82a 10%, #99ca5f 10%);
+  height: 6px;
+  border-radius: 30px;
+}
 
+.percent-range:disabled::-moz-range-track {
+  background: linear-gradient(to left, #77b82a 10%, #99ca5f 10%);
+  height: 6px;
+  border-radius: 30px;
+}
+
+/* Remove o círculo (thumb) */
+.percent-range:disabled::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+.percent-range:disabled::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  border: none;
+  background: none;
 }
