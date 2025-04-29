@@ -1,8 +1,53 @@
 import './StyleChat.css'
 import Logo from '../assets/img/Logo.png'
+import { useState } from 'react'
+import axios from 'axios';
+import ChatResponse from './components/ChatResponse'
 
 function AreaMedicaChat() {
+  const [responseData, setResponseData] = useState(null);
+  const [formData, setFormData] = useState({
+    observacoes_medicas: "",
+    relatorio_pessoal: "",
+    pressao: "",
+    saturacao_sangue: "",
+    peso: 0,
+    exames_realizados: "",
+    historico_med_familiar: "",
+    condicoes_med_preexistentes: "",
+    medicacoes_em_uso: "",
+    restricoes: "",
+    temperatura: ""
+  });
+const handleChange = (field, value) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+};
+const handleSubmit = async (e) => {
+    e.preventDefault();
+  try{
+    const DiagnosticPayload = {
+      id: 0,
+      observacoes_medicas: formData.observacoes_medicas,
+      relatorio_pessoal: formData.relatorio_pessoal,
+      pressao: formData.pressao,
+      saturacao_sangue: formData.saturacao_sangue,
+      peso: parseFloat(formData.peso),
+      exames_realizados: formData.exames_realizados,
+      historico_med_familiar: formData.historico_med_familiar,
+      condicoes_med_preexistentes: formData.condicoes_med_preexistentes,
+      medicacoes_em_uso: formData.medicacoes_em_uso,
+      restricoes: formData.restricoes,
+      temperatura: formData.temperatura
+    };
+    console.log(DiagnosticPayload)
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}diagnostico/enviar-para-analise`, DiagnosticPayload);
+    setResponseData(response.data);
 
+  }catch(error){
+    alert('erro ao encontrar',error)
+  }
+  }
+    
   return (
     <>
     <div className='menu menu-expand-lg bg-body-tertiary fixed-top'> 
@@ -13,10 +58,10 @@ function AreaMedicaChat() {
         </div> 
       
         <div className='conteudo-central justify-content-center'>
-          <nav class="nav nav-pills nav-fill">
-            <a class="nav-link active" aria-current="page" href="#">Painel</a>
-            <a class="nav-link" href="#">Agenda</a>
-            <a class="nav-link" href="#">Prontuarios</a>
+          <nav className="nav nav-pills nav-fill">
+            <a className="nav-link active" aria-current="page" href="#">Painel</a>
+            <a className="nav-link" href="#">Agenda</a>
+            <a className="nav-link" href="#">Prontuarios</a>
           </nav>
         </div>
 
@@ -29,76 +74,88 @@ function AreaMedicaChat() {
     </div>
 
       <div className='container-chat'>
-          <div className='historico '>
+          <div className='historico1'>
             <h4 className='titulo-hitorico' >Histórico</h4>
 
             <div className='topicos-hitorico'>
               <ul className='sub-topicos'>
-                  <li><i class="bi bi-file-earmark-medical-fill"></i> Consulta
+                  <li><i className="bi bi-capsule-pill"></i> Alergias
                     <ul>
-                      <li><a href="">Consulta 22/03/25</a></li>
-                      <li><a href="">Consulta 15/02/25</a></li></ul>
-                    </li>
+                      <input id="restricoes" value={formData.restricoes} onChange={(e) => handleChange('restricoes', e.target.value)} type="text" className="form-control"/>
+                    </ul>
+                  </li>
+                  <li><i className="bi bi-capsule-pill"></i> Observacoes medicas
+                    <ul>
+                      <textarea id="observacoes_medicas" value={formData.observacoes_medicas} onChange={(e) => handleChange('observacoes_medicas', e.target.value)} type="text" className="form-control"/>
+                    </ul>
+                  </li>
 
-                  <li><i class="bi bi-clipboard2-pulse"></i> Sintomas
+                  <li><i className="bi bi-capsule-pill"></i> Relatorio Pessoal
                     <ul>
-                      <li><a href="">Histotico de sintomas</a></li></ul>
-                    </li>
+                      <textarea id="relatorio_pessoal" value={formData.relatorio_pessoal} onChange={(e) => handleChange('relatorio_pessoal', e.target.value)} type="text" className="form-control"/>
+                    </ul>
+                  </li>
 
-                  <li><i class="bi bi-file-earmark-text"></i> Diagnosticos
+                  <li><i className="bi bi-capsule-pill"></i> Pressao
                     <ul>
-                      <li><a href="">Diagnostico 1</a></li>
-                      <li><a href="">Diagnostico 2</a></li></ul>
-                    </li>
+                      <input id="pressao" value={formData.pressao} onChange={(e) => handleChange('pressao', e.target.value)} type="text" className="form-control"/>
+                    </ul>
+                  </li>
 
-                  <li><i class="bi bi-capsule"></i> Medicamentos
+                  <li><i className="bi bi-capsule-pill"></i> Saturação do Sangue
                     <ul>
-                      <li><a href="">Uso continuo</a></li>
-                      <li><a href="">Tratamento</a></li></ul>
-                    </li>
+                      <input id="saturacao_sangue" value={formData.saturacao_sangue} onChange={(e) => handleChange('saturacao_sangue', e.target.value)} type="text" className="form-control"/>
+                    </ul>
+                  </li>
 
-                  <li><i class="bi bi-capsule-pill"></i> Alergias
+                  <li><i className="bi bi-capsule-pill"></i> peso
                     <ul>
-                      <li><a href="">Medicamentos</a></li>
-                      <li><a href="">Outros</a></li></ul>
-                    </li>
-                  </ul>
+                      <input id="peso" value={formData.peso} onChange={(e) => handleChange('peso', e.target.value)} type="text" className="form-control"/>
+                    </ul>
+                  </li>
+
+                  <li><i className="bi bi-capsule-pill"></i> Exames realizados
+                    <ul>
+                      <input id="exames_realizados" value={formData.exames_realizados} onChange={(e) => handleChange('exames_realizados', e.target.value)} type="text" className="form-control"/>
+                    </ul>
+                  </li>
+
+                  <li><i className="bi bi-capsule-pill"></i> historico med. fam.
+                    <ul>
+                      <input id="historico_med_familiar" value={formData.historico_med_familiar} onChange={(e) => handleChange('historico_med_familiar', e.target.value)} type="text" className="form-control"/>
+                    </ul>
+                  </li>
+
+                  <li><i className="bi bi-capsule-pill"></i> condicoes med. pre.
+                    <ul>
+                      <input id="pressao" value={formData.pressao} onChange={(e) => handleChange('pressao', e.target.value)} type="text" className="form-control"/>
+                    </ul>
+                  </li>
+
+                  <li><i className="bi bi-capsule-pill"></i> medicacoes em uso
+                    <ul>
+                      <input id="medicacoes_em_uso" value={formData.medicacoes_em_uso} onChange={(e) => handleChange('medicacoes_em_uso', e.target.value)} type="text" className="form-control"/>
+                    </ul>
+                  </li>
+
+                  <li><i className="bi bi-capsule-pill"></i> temperatura
+                    <ul>
+                      <input id="temperatura" value={formData.temperatura} onChange={(e) => handleChange('temperatura', e.target.value)} type="text" className="form-control"/>
+                    </ul>
+                  </li>
+                  <br></br>
+                  <li>
+                    <button type="button" onClick={handleSubmit} className="btn btn-primary">Enviar</button>
+                  </li>
+              </ul>
             </div>
-
           </div>
 
           <div className='chat'>
-            <div class="w-full max-w-md h-[600px] shadow-2xl rounded-2xl flex flex-col overflow-hidden">
-        
-            <h3 class="ermes bg-blue-600 text-center py-4 text-xl font-semibold">
+          <h3 className="hermes text-center py-4 text-xl font-semibold rounded-xl">
               Hermes
             </h3>
-
-            <div class="container-chat-mensagem flex-1 overflow-y-auto p-4 space-y-4">
-              <div class="flex">
-                <div class="bg-gray-200 text-gray-800 p-3 rounded-lg rounded-tl-none max-w-[75%]">
-                  Vamos iniciar a consulta?
-                </div>
-              </div>
-              
-              <div class="flex justify-end">
-                <div class="bg-blue-500  p-3 rounded-lg rounded-tr-none max-w-[75%]">
-                  Informe quais sintomas a criança está tendo
-                </div>
-              </div>
-            </div>
-
-            <form class="container-mensagens flex justify-center items-center p-3 border-t gap-2">
-              <input type="text" placeholder="Digite sua mensagem..." class="mensagens flex-1 border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"/>
-              <button type="submit" class="enviar bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-full">
-                Enviar
-              </button>
-              <button type="submit" class="camera bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-full">
-                <i class="bi bi-camera"></i>
-              </button>
-            </form>
-            
-          </div>
+            {responseData && <ChatResponse response={responseData} />}
         </div>
       </div>
     </>

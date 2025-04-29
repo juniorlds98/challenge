@@ -1,13 +1,42 @@
 import { useState } from 'react'
 import '../login.css'
 import Component from '../assets/img/Component 3.png';
+import axios from 'axios';
 
 function Login() {
-
+    const [formData, setFormData] = useState({
+        cpfcrm: '',
+        password: '',
+      });
+    const handleChange = (field, value) => {
+        setFormData(prev => ({ ...prev, [field]: value }));
+    };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+      try{
+        const LoginPayload = {
+          cpfcrm: formData.cpfcrm,
+          password: formData.password,
+        };
+        console.log(LoginPayload)
+        const response = await axios.post(`${import.meta.env.VITE_API_URL}auth/login`, LoginPayload);
+        console.log(response)
+        console.log(response.data.nome)
+        if(!(response.data.nome == NaN)){
+            window.location.href = "/confirmacao";
+        }else{
+            alert('Credenciais invalidas')
+        }
+        
+      }catch(error){
+        alert('erro ao logar',error)
+      }
+      }
+        
     return (
         <>
         <div className='fechamento-tela fechamento-tela-expand-lg bg-body-tertiary fixed-top'>
-            <button type="button" class="btn-close" disabled aria-label="Close"></button>
+            <button type="button" className="btn-close" disabled aria-label="Close"></button>
         </div>
 
         <div className="pagina-login d-flex flex-lg-row flex-column min-vh-100 fixed-top">
@@ -29,12 +58,12 @@ function Login() {
                 </div>
 
                 <div className="mb-3">
-                    <input type="text" className="form-control" id="cpf" placeholder="Informe seu CPF ou CRM" />
+                    <input type="text" className="form-control" id="cpfcrm" placeholder="Informe seu CPF ou CRM" value={formData.cpfcrm} onChange={(e) => handleChange('cpfcrm', e.target.value)}/>
                 </div>
 
                 <div className="mb-3 ">
                     <label htmlFor="senha" className="form-label">Senha</label>
-                    <input type="password" className="form-control" id="senha" placeholder="Informe sua senha" />
+                    <input type="password" className="form-control" id="password" placeholder="Informe sua senha" value={formData.password} onChange={(e) => handleChange('password', e.target.value)}/>
                 </div>
 
                 <div className="mb-3 d-flex justify-content-between">
@@ -42,7 +71,7 @@ function Login() {
                 </div>
 
                 <div className="d-grid gap-2">
-                    <button type="submit" className="btn btn-primary">Entrar</button>
+                    <button type="button" onClick={handleSubmit} className="btn btn-primary">Entrar</button>
                 </div>
                 </form>
             </div>
