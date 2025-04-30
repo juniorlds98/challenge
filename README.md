@@ -2,6 +2,7 @@
 
 HermesFront é a interface web do sistema clínico Hermes, desenvolvida com Vite + Node.js, utilizando Bootstrap para componentes prontos e TailwindCSS para estilização utilitária. O front-end permite o controle visual do atendimento clínico, gerenciamento de pacientes, visualização de imagens médicas classificadas por IA e administração de recursos hospitalares.
 
+
 # 🎯 Objetivo
 
 Fornecer uma interface leve, responsiva e moderna que se comunique com a HermesAPI para facilitar o fluxo de trabalho médico e administrativo.
@@ -51,6 +52,22 @@ csharp/Copiar/Editar
 🔐 Login médico com perfil e permissões
 
 🔐 Login pais e responsáveis com perfil e permissões
+
+## 🖥️ Responsividade
+A interface do HermesFront foi projetada com foco em usabilidade em tablets e computadores, alinhada ao fluxo de trabalho em clínicas e hospitais. Por isso, a maior parte do sistema foi otimizada para telas maiores, garantindo clareza na visualização de dados médicos, imagens e tabelas.
+
+No entanto, a área de acesso dos pais/responsáveis foi desenvolvida com responsividade total, permitindo visualização adequada em smartphones, de forma prática e acessível.
+
+📌 Resumo da responsividade:
+
+✅ Acesso dos pais: totalmente responsivo (mobile-first)
+
+💻 Área administrativa/médica: compatível com tablets e desktops
+
+❌ Não recomendado para uso completo em smartphones (exceto acesso dos pais)
+
+Essa escolha visa garantir uma experiência profissional fluida para os profissionais de saúde e, ao mesmo tempo, facilidade de acesso para os responsáveis, mesmo fora do ambiente clínico.
+
 
 ## 🚀 Instalação e Execução
 1. Clonar o projeto
