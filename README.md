@@ -102,3 +102,12 @@ A interface se comunica com o módulo ESP32 Hermes para notificações e control
 
 ## 📡 API
 [HermesAPI](https://github.com/CAIOMSa/ChallangeSabaraHermes/tree/main)
+
+## Grupo
+```
+Rm: 559680 José Claudio da Silva Junior
+Rm: 560753 Caio Martinez Saes
+Rm: 560264 Wesley Zimmer
+Rm: 560181 Estefany Caetano de Jesus
+Rm: 560131 Guilherme Rodrigues Leite
+```
