@@ -197,7 +197,7 @@ function HomePage() {
 
   <div className='container-espacamento'>
 
-  {/* CORROSSEL ------------------------------------- */}
+  {/* CORROSSEL -------------------------------------------------------------------- */}
     <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-inner">
 
