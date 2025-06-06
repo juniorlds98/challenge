@@ -94,9 +94,6 @@ Certifique-se de que a HermesAPI esteja rodando na porta correta (http://localho
 
 O front utiliza variáveis de ambiente (.env) para definir a URL base da API
 
-## 📸 Preview
-(Adicione prints de tela ou GIFs aqui mostrando o sistema em uso)
-
 ## 🤝 Integração com ESP32
 A interface se comunica com o módulo ESP32 Hermes para notificações e controle remoto do atendimento.
 
